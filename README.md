@@ -1,1 +1,1 @@
-# Image-Processing-in-C-Plus-Plus
+# C/C++
