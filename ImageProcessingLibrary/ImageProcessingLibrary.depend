@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1579523270 source:c:\jadav das\udemy\image processing\imageprocessinglibrary\main.cpp
+	"ImageProcessing.h"
+
+1579523405 c:\jadav das\udemy\image processing\imageprocessinglibrary\include\imageprocessing.h
+	<iostream>
+	<fstream>
+	<cstdio>
+	<vector>
+
+1579523281 source:c:\jadav das\udemy\image processing\imageprocessinglibrary\src\imageprocessing.cpp
+	"ImageProcessing.h"
+
