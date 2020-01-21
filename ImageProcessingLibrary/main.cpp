@@ -11,8 +11,8 @@ int main()
     unsigned char imgOutBuffer[_512by512_IMG_SIZE] = {0};
     float imgHistogram[NO_OF_GRAYLEVELS];
 
-    const char imgName[] = "Images/houses.bmp";
-    const char newImgName[] = "Images/houses_rdia.bmp";
+    const char imgName[] = "Images/girlface.bmp";
+    const char newImgName[] = "Images/girlface_minfilter.bmp";
 
     ImageProcessing *myImage = new ImageProcessing(imgName,
                                                    newImgName,
@@ -27,13 +27,20 @@ int main()
 
     myImage->readImage();
     //myImage->copyImageData(imgInBuffer, imgOutBuffer, _512by512_IMG_SIZE);
-    // myImage->binarizeImage(imgInBuffer, imgOutBuffer, _512by512_IMG_SIZE, 100);
+    //myImage->binarizeImage(imgInBuffer, imgOutBuffer, _512by512_IMG_SIZE, 100);
     //myImage->brightnessUp(imgInBuffer, imgOutBuffer, _512by512_IMG_SIZE, 50);
     //myImage->brightnessDown(imgInBuffer, imgOutBuffer, _512by512_IMG_SIZE, 50);
     //myImage->computeHistogram(imgInBuffer, imgHeight, imgWidth, imgHistogram);
     //myImage->equalizeHistogram(imgInBuffer, imgOutBuffer, imgHeight, imgWidth);
     //myImage->getImageNegative(imgInBuffer, imgOutBuffer, imgHeight, imgWidth);
-    myImage->detectLine(imgInBuffer, imgOutBuffer, imgHeight, imgWidth, LINE_DETECTOR_RDIA_MASK);
+    //myImage->detectLine(imgInBuffer, imgOutBuffer, imgHeight, imgWidth, LINE_DETECTOR_RDIA_MASK);
+    //myImage->setMask(3, 3, PREWITT_HOR);
+    //myImage->convolve2D(imgInBuffer, imgOutBuffer, imgHeight, imgWidth, &myImage->myMask);
+    //myImage->generateGaussNoise(imgInBuffer, imgHeight, imgWidth, 100, 80);
+    //myImage->saltAndPepper(imgInBuffer,imgWidth,imgHeight,0.6);
+    //myImage->maximumFilter(imgInBuffer, imgOutBuffer, imgHeight, imgWidth);
+    //myImage->medianFilter(imgInBuffer, imgOutBuffer, imgHeight, imgWidth);
+    myImage->minimumFilter(imgInBuffer, imgOutBuffer, imgHeight, imgWidth);
 
     myImage->writeImage();
 
